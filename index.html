@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Antsa Andriamanampisoa — Portfolio</title>
-<meta name="description" content="Portfolio de Antsa Andriamanampisoa — Développeur Web & IA. Antananarivo, Madagascar."/>
+<meta name="description" content="Portfolio de Antsa Andriamanampisoa — Développeur Web & IA. Étudiant en L3 Génie Logiciel à INSIDE University, Antananarivo, Madagascar. Ouvert aux stages."/>
 <meta name="theme-color" content="#050a12"/>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23050a12'/><text x='50' y='70' font-size='55' text-anchor='middle' fill='%2300e5a0' font-family='Arial' font-weight='bold'>A</text></svg>"/>
 
@@ -137,6 +137,7 @@ header { text-align: center; margin-bottom: 30px; padding-top: 40px; animation: 
     border-radius: 100px; display: inline-flex; align-items: center; gap: 8px;
     background: rgba(0,229,160,.04); margin-bottom: 22px;
 }
+.badge-gold { color: var(--gold); border-color: rgba(255,179,0,.3); background: rgba(255,179,0,.06); margin-bottom: 10px; }
 header h1 { font-weight: 900; letter-spacing: -.04em; line-height: 1.02; }
 header h1 .l1 {
     display: block; font-size: clamp(2.8rem, 9vw, 5.2rem);
@@ -169,7 +170,7 @@ header::after {
     margin: 34px auto 0; border-radius: 2px;
 }
 
-/* ===== BOUTONS (style #btnPredict) ===== */
+/* ===== BOUTONS ===== */
 .btn {
     display: inline-flex; align-items: center; justify-content: center; gap: 10px;
     padding: 14px 28px; border-radius: var(--radius); border: none; cursor: pointer;
@@ -196,7 +197,7 @@ header::after {
 }
 .btn-ghost:hover { border-color: rgba(0,229,160,.4); color: var(--accent); transform: translateY(-2px); }
 
-/* ===== GLASS CARD (style #predictionForm) ===== */
+/* ===== GLASS CARD ===== */
 .glass {
     position: relative; background: var(--card);
     border: 1px solid rgba(0,229,160,.08); border-radius: var(--radius-lg);
@@ -253,7 +254,7 @@ header::after {
 }
 .photo-fallback { display: none; align-items: center; justify-content: center; font-size: 3.6rem; font-weight: 900; color: var(--accent); }
 .photo-name { font-weight: 700; font-size: 1.05rem; }
-.photo-sub { font-size: .78rem; color: var(--muted); display: flex; align-items: center; gap: 7px; }
+.photo-sub { font-size: .78rem; color: var(--muted); display: flex; align-items: center; gap: 7px; text-align: center; }
 .photo-sub i { color: var(--accent); }
 
 .about-txt p { color: var(--muted); font-weight: 300; line-height: 1.8; margin-bottom: 14px; font-size: .95rem; }
@@ -297,7 +298,7 @@ header::after {
 }
 .skill-card:hover .chip { color: var(--fg); border-color: rgba(0,229,160,.25); }
 
-/* ===== PROJETS ===== */
+/* ===== EXPÉRIENCES / PROJETS ===== */
 .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .p-card { --acc: var(--accent); display: flex; flex-direction: column; padding: 26px; transition: all .35s cubic-bezier(.22,1,.36,1); }
 .p-card:hover { transform: translateY(-6px); border-color: var(--acc); box-shadow: 0 30px 80px rgba(0,0,0,.5), 0 0 60px color-mix(in srgb, var(--acc) 12%, transparent); }
@@ -334,6 +335,8 @@ header::after {
     border: 2px solid var(--accent); transform: rotate(45deg);
     box-shadow: 0 0 12px rgba(0,229,160,.4);
 }
+.tl-item.gold::before { border-color: var(--gold); box-shadow: 0 0 12px rgba(255,179,0,.4); }
+.tl-item.gold .tl-year { color: var(--gold); }
 .tl-year { font-size: .7rem; font-weight: 700; letter-spacing: .12em; color: var(--accent); text-transform: uppercase; }
 .tl-item h3 { font-size: 1.02rem; font-weight: 700; margin: 5px 0 3px; }
 .tl-item p { color: var(--muted); font-size: .85rem; font-weight: 300; }
@@ -363,7 +366,7 @@ header::after {
 .c-card small { display: block; font-size: .62rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 .c-card span { color: var(--fg); font-size: .88rem; font-weight: 600; }
 
-/* ===== FORMULAIRE (style d'origine) ===== */
+/* ===== FORMULAIRE ===== */
 #contactForm { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 18px; margin-top: 26px; }
 #contactForm .full { grid-column: 1 / -1; }
 #contactForm input, #contactForm textarea {
@@ -459,6 +462,7 @@ footer .heart { color: var(--gold); }
             <li><a href="#accueil">Accueil</a></li>
             <li><a href="#apropos">À propos</a></li>
             <li><a href="#competences">Compétences</a></li>
+            <li><a href="#experiences">Expériences</a></li>
             <li><a href="#projets">Projets</a></li>
             <li><a href="#parcours">Parcours</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -474,6 +478,9 @@ footer .heart { color: var(--gold); }
 
     <!-- HERO -->
     <header id="accueil">
+        <div>
+            <span class="badge-pill badge-gold"><i class="fa-solid fa-trophy"></i> 1ʳᵉ PLACE — SCIENCE HACKDAY 2026 · TEAM INSIDE</span>
+        </div>
         <span class="badge-pill"><i class="fa-solid fa-code"></i> PORTFOLIO — ANTANANARIVO, MADAGASCAR</span>
         <h1>
             <span class="l1">ANTSA</span>
@@ -484,7 +491,7 @@ footer .heart { color: var(--gold); }
             Étudiant en <strong>L3 Informatique — Génie Logiciel</strong> à INSIDE University.
             Passionné par le <strong>développement web</strong>, l'<strong>intelligence artificielle</strong>,
             les <strong>systèmes et réseaux</strong>. Curieux, polyvalent et persévérant —
-            je transforme des idées en projets concrets.
+            je transforme des idées en projets concrets et je suis <strong>ouvert aux stages</strong>.
         </p>
         <div class="hero-cta">
             <a href="#projets" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Découvrir mes projets</a>
@@ -495,10 +502,10 @@ footer .heart { color: var(--gold); }
 
     <!-- KPIs -->
     <div class="kpi-grid reveal">
-        <div class="kpi-card"><i class="fa-solid fa-layer-group text-accent"></i><div><span class="kpi-label">Projets réalisés</span><span class="kpi-value"><span data-count="3">0</span>+</span></div></div>
+        <div class="kpi-card"><i class="fa-solid fa-layer-group text-accent"></i><div><span class="kpi-label">Projets réalisés</span><span class="kpi-value"><span data-count="5">0</span>+</span></div></div>
+        <div class="kpi-card"><i class="fa-solid fa-trophy text-gold"></i><div><span class="kpi-label">Hackathon gagné</span><span class="kpi-value"><span data-count="1">0</span></span></div></div>
         <div class="kpi-card"><i class="fa-solid fa-code text-accent2"></i><div><span class="kpi-label">Technologies</span><span class="kpi-value"><span data-count="15">0</span>+</span></div></div>
-        <div class="kpi-card"><i class="fa-solid fa-language text-gold"></i><div><span class="kpi-label">Langues</span><span class="kpi-value"><span data-count="4">0</span></span></div></div>
-        <div class="kpi-card"><i class="fa-solid fa-infinity text-accent"></i><div><span class="kpi-label">Curiosité</span><span class="kpi-value">∞</span></div></div>
+        <div class="kpi-card"><i class="fa-solid fa-language text-accent"></i><div><span class="kpi-label">Langues</span><span class="kpi-value"><span data-count="4">0</span></span></div></div>
     </div>
 
     <!-- À PROPOS -->
@@ -515,22 +522,24 @@ footer .heart { color: var(--gold); }
                     <div class="photo-fallback">AA</div>
                 </div>
                 <div class="photo-name">Vahatriniaina Antsanirina</div>
-                <div class="photo-sub"><i class="fa-solid fa-location-dot"></i> Antananarivo, Madagascar · 22 ans</div>
+                <div class="photo-sub"><i class="fa-solid fa-location-dot"></i> Ambohidratrimo 105, Antananarivo · 22 ans</div>
             </div>
             <div>
                 <div class="glass about-txt reveal" style="--d:.1s">
+                    <p>🏆 Lauréat du <strong>Science Hackday 2026</strong> (1ʳᵉ place, Team INSIDE) avec une plateforme <span class="hl">HealthTech</span> d'accès aux soins en zones rurales.</p>
                     <p>Passionné par le <strong>développement web</strong>, l'<span class="hl">intelligence artificielle</span>, les <strong>systèmes et les réseaux</strong> — j'aime construire des applications qui <span class="hl">fonctionnent vraiment</span> : d'une marketplace e-commerce complète à un assistant IA local.</p>
-                    <p>Mon parcours mêle développement full-stack, machine learning et administration système. À travers chaque projet, je cherche à <strong>mettre en pratique mes compétences</strong>, développer mon expérience et <strong>contribuer à des solutions concrètes</strong>.</p>
+                    <p>Mon parcours mêle développement full-stack, machine learning et administration système. Je souhaite effectuer un <strong>stage</strong> afin de mettre en pratique mes compétences, développer mon expérience professionnelle et <strong>contribuer à des solutions concrètes</strong> au sein d'une équipe.</p>
                     <div class="info-row">
                         <span class="info-chip"><i class="fa-solid fa-graduation-cap"></i> L3 Génie Logiciel — INSIDE University</span>
                         <span class="info-chip"><i class="fa-solid fa-robot"></i> IA & Data Science</span>
                         <span class="info-chip"><i class="fa-solid fa-server"></i> Systèmes & Réseaux</span>
+                        <span class="info-chip"><i class="fa-solid fa-briefcase"></i> Ouvert aux stages</span>
                     </div>
                 </div>
                 <div class="glass lang-card reveal" style="--d:.18s">
                     <div class="lang"><div class="lang-top"><span>🇲🇬 Malagasy</span><em>Natif</em></div><div class="bar"><span style="--w:100%"></span></div></div>
-                    <div class="lang"><div class="lang-top"><span>🇫🇷 Français</span><em>Intermédiaire</em></div><div class="bar"><span style="--w:60%"></span></div></div>
-                    <div class="lang"><div class="lang-top"><span>🇬🇧 Anglais</span><em>Débutant</em></div><div class="bar"><span style="--w:35%"></span></div></div>
+                    <div class="lang"><div class="lang-top"><span>🇫🇷 Français</span><em>Bon niveau</em></div><div class="bar"><span style="--w:85%"></span></div></div>
+                    <div class="lang"><div class="lang-top"><span>🇬🇧 Anglais</span><em>Intermédiaire</em></div><div class="bar"><span style="--w:60%"></span></div></div>
                     <div class="lang"><div class="lang-top"><span>🇨🇳 Chinois</span><em>Débutant</em></div><div class="bar"><span style="--w:30%"></span></div></div>
                 </div>
             </div>
@@ -554,7 +563,7 @@ footer .heart { color: var(--gold); }
             </div>
             <div class="glass skill-card reveal" style="--d:.16s">
                 <div class="skill-icon"><i class="fa-solid fa-brain"></i></div><h3>IA & Data Science</h3>
-                <div class="chips"><span class="chip">Machine Learning</span><span class="chip">Deep Learning</span><span class="chip">TensorFlow</span><span class="chip">Keras</span><span class="chip">Régression</span><span class="chip">Classification</span><span class="chip">MLP</span></div>
+                <div class="chips"><span class="chip">Machine Learning</span><span class="chip">Deep Learning</span><span class="chip">TensorFlow</span><span class="chip">Keras</span><span class="chip">Régression linéaire</span><span class="chip">Classification</span><span class="chip">MLP</span><span class="chip">Prétraitement & analyse de données</span></div>
             </div>
             <div class="glass skill-card reveal" style="--d:.24s">
                 <div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div><h3>Systèmes & Réseaux</h3>
@@ -566,9 +575,25 @@ footer .heart { color: var(--gold); }
             </div>
             <div class="glass skill-card reveal" style="--d:.4s">
                 <div class="skill-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div><h3>Autres atouts</h3>
-                <div class="chips"><span class="chip">Gestion de projet</span><span class="chip">Comptabilité générale</span><span class="chip">Multimédia</span><span class="chip">CNC & Impression 3D</span></div>
+                <div class="chips"><span class="chip">Management de projet</span><span class="chip">Comptabilité générale</span><span class="chip">Multimédia</span><span class="chip">CNC & Impression 3D</span></div>
             </div>
         </div>
+    </section>
+
+    <!-- EXPÉRIENCES & RÉALISATIONS -->
+    <section id="experiences">
+        <div class="section-head reveal">
+            <h2><i class="fa-solid fa-trophy"></i> <span>EXPÉRIENCES</span></h2>
+            <p>Distinctions & réalisations marquantes</p>
+        </div>
+        <article class="glass p-card c3 reveal">
+            <div class="p-top"><span class="p-num">🏆</span><div class="p-icon"><i class="fa-solid fa-heart-pulse"></i></div></div>
+            <span class="p-tag">Science Hackday 2026 — 11ᵉ Édition · MI-AINA · Challenge 48 h · Sept. 2026</span>
+            <h3>MEDICAL INTELLIGENCE — Navigation & Accès aux soins</h3>
+            <p>Plateforme HealthTech de télémédecine et de surveillance sanitaire combinant IoT, IA et développement web, conçue en 48 h pour répondre aux problèmes d'accès aux soins en zones rurales : prototype Django/Python intégrant ESP32, MLX90614 et AD8232, centralisation des données physiologiques via API, IA de classification du niveau de risque, et parcours patient → agent de santé → médecin. Événement soutenu par le MESUPRES, le CIDST et ses partenaires.</p>
+            <div class="chips"><span class="chip">Django</span><span class="chip">Python</span><span class="chip">IoT / ESP32</span><span class="chip">API REST</span><span class="chip">Machine Learning</span><span class="chip">HealthTech</span></div>
+            <span class="p-link" style="cursor:default">🥇 1ʳᵉ place — Team INSIDE <i class="fa-solid fa-medal"></i></span>
+        </article>
     </section>
 
     <!-- PROJETS -->
@@ -596,10 +621,18 @@ footer .heart { color: var(--gold); }
             </article>
             <article class="glass p-card c3 reveal" style="--d:.16s">
                 <div class="p-top"><span class="p-num">03</span><div class="p-icon"><i class="fa-solid fa-chart-line"></i></div></div>
-                <span class="p-tag">Machine Learning × API</span>
+                <span class="p-tag">ML × Prédiction de salaire</span>
                 <h3>SMART CAREER</h3>
-                <p>Application prédictive basée sur des données professionnelles. Entraînement d'un modèle ML et développement d'une API REST documentée avec OpenAPI / Swagger.</p>
+                <p>Application prédictive de salaire basée sur des données professionnelles. Entraînement d'un modèle ML et développement d'une API REST documentée avec OpenAPI / Swagger.</p>
                 <div class="chips"><span class="chip">Python</span><span class="chip">TensorFlow / Keras</span><span class="chip">FastAPI</span></div>
+                <a class="p-link" href="https://github.com/Antsaandria88-dev" target="_blank">Voir sur GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+            <article class="glass p-card c2 reveal" style="--d:.24s">
+                <div class="p-top"><span class="p-num">04</span><div class="p-icon"><i class="fa-solid fa-server"></i></div></div>
+                <span class="p-tag">Systèmes & Réseaux</span>
+                <h3>SUPERVISION ZABBIX</h3>
+                <p>Mise en place d'une infrastructure de supervision : serveur Zabbix, agents déployés sous Windows et Ubuntu, collecte des métriques (CPU, RAM, stockage, disponibilité), dashboards et alertes en cas d'anomalie.</p>
+                <div class="chips"><span class="chip">Zabbix</span><span class="chip">Windows Server</span><span class="chip">Ubuntu</span><span class="chip">Monitoring</span></div>
                 <a class="p-link" href="https://github.com/Antsaandria88-dev" target="_blank">Voir sur GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </article>
         </div>
@@ -612,11 +645,12 @@ footer .heart { color: var(--gold); }
             <p>Formation & parcours académique</p>
         </div>
         <div class="timeline">
-            <div class="tl-item reveal"><span class="tl-year">2025 — 2026</span><h3>L3 Informatique — Génie Logiciel</h3><p>INSIDE University</p></div>
-            <div class="tl-item reveal" style="--d:.08s"><span class="tl-year">2024 — 2025</span><h3>L2 Informatique</h3><p>INSIDE University</p></div>
-            <div class="tl-item reveal" style="--d:.16s"><span class="tl-year">2023 — 2024</span><h3>L1 Informatique</h3><p>INSIDE University</p></div>
-            <div class="tl-item reveal" style="--d:.24s"><span class="tl-year">2022 — 2023</span><h3>Baccalauréat</h3><p>Lycée Ambohidratrimo</p></div>
-            <div class="tl-item reveal" style="--d:.32s"><span class="tl-year">Formation complémentaire</span><h3>Outils numériques · Gestion de projets digitaux · CNC & Impression 3D</h3><p>Orange Digital Center</p></div>
+            <div class="tl-item gold reveal"><span class="tl-year">Sept. 2026</span><h3>🥇 Science Hackday 2026 — 11ᵉ édition (MI-AINA)</h3><p>1ʳᵉ place · Team INSIDE — Challenge d'innovation 48 h</p></div>
+            <div class="tl-item reveal" style="--d:.08s"><span class="tl-year">2025 — 2026</span><h3>L3 Informatique — Parcours Génie Logiciel</h3><p>INSIDE University</p></div>
+            <div class="tl-item reveal" style="--d:.16s"><span class="tl-year">2024 — 2025</span><h3>L2 Informatique</h3><p>INSIDE University</p></div>
+            <div class="tl-item reveal" style="--d:.24s"><span class="tl-year">2023 — 2024</span><h3>L1 Informatique</h3><p>INSIDE University</p></div>
+            <div class="tl-item reveal" style="--d:.32s"><span class="tl-year">2022 — 2023</span><h3>Baccalauréat</h3><p>Lycée Ambohidratrimo</p></div>
+            <div class="tl-item reveal" style="--d:.4s"><span class="tl-year">Formation complémentaire</span><h3>Outils numériques · Gestion de projets digitaux · CNC & Impression 3D</h3><p>Orange Digital Center</p></div>
         </div>
     </section>
 
@@ -630,9 +664,9 @@ footer .heart { color: var(--gold); }
             <h2 class="contact-big">Construisons quelque<br/><span class="stroke">chose ensemble.</span></h2>
             <a href="mailto:Antsaandria88@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Antsaandria88@gmail.com</a>
             <div class="contact-grid">
-                <a class="c-card" href="tel:+261334586340"><i class="fa-solid fa-phone"></i><div><small>Téléphone</small><span>+261 33 45 863 40</span></div></a>
+                <a class="c-card" href="tel:+261334586340"><i class="fa-solid fa-phone"></i><div><small>Téléphone</small><span>033 45 863 40</span></div></a>
                 <a class="c-card" href="https://github.com/Antsaandria88-dev" target="_blank"><i class="fa-brands fa-github"></i><div><small>GitHub</small><span>@Antsaandria88-dev</span></div></a>
-                <div class="c-card"><i class="fa-solid fa-location-dot"></i><div><small>Localisation</small><span>Antananarivo, Madagascar</span></div></div>
+                <div class="c-card"><i class="fa-solid fa-location-dot"></i><div><small>Localisation</small><span>Ambohidratrimo 105, Antananarivo</span></div></div>
                 <button class="c-card" id="copyEmail"><i class="fa-solid fa-copy"></i><div><small>Astuce</small><span>Copier mon email</span></div></button>
             </div>
             <form id="contactForm">
@@ -658,6 +692,9 @@ footer .heart { color: var(--gold); }
 <button id="toTop" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i></button>
 
 <script>
+/* ================= MOUSE GLOW (déclaré avant utilisation) ================= */
+const glow = document.getElementById('mouseGlow');
+
 /* ================= PARTICULES ================= */
 const canvas = document.getElementById('particleCanvas'), ctx = canvas.getContext('2d');
 let W, H, parts = [], N;
@@ -703,9 +740,6 @@ function loop() {
 }
 loop();
 
-/* ================= MOUSE GLOW ================= */
-const glow = document.getElementById('mouseGlow');
-
 /* ================= MOTEUR AUDIO (sons générés, zéro fichier) ================= */
 let actx = null, soundOn = true;
 function ensureCtx() {
@@ -746,7 +780,7 @@ burger.addEventListener('click', () => navLinks.classList.toggle('open'));
 navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
 /* ================= TYPEWRITER ================= */
-const words = ['DÉVELOPPEUR WEB & BACKEND', 'PASSIONNÉ D\u2019IA & DATA SCIENCE', 'ÉTUDIANT EN L3 INFORMATIQUE', 'BUILDER DE PROJETS CONCRETS'];
+const words = ['DÉVELOPPEUR WEB & BACKEND', 'PASSIONNÉ D\u2019IA & DATA SCIENCE', 'ÉTUDIANT EN L3 INFORMATIQUE', 'LAURÉAT SCIENCE HACKDAY 2026', 'BUILDER DE PROJETS CONCRETS'];
 const rotor = document.getElementById('rotor');
 let wi = 0, ci = 0, del = false;
 (function tick() {
